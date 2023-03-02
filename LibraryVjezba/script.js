@@ -6,7 +6,7 @@ const readStatus = document.getElementById("readStat");
 
 const container = document.getElementById("bookOutput");
 
-console.log(container);
+const removeButton = document.querySelectorAll("#removeBtn");
 
 let myLibrary = [];
 
@@ -29,7 +29,9 @@ function addBookToLibrary() {
       pageNumber.value === "" ||
       readStatus.value === "Did you read this book?"
     )
-      return;
+      return alert(
+        "Please fill out all required fields before adding a new book!"
+      );
 
     let titleName = BookName.value;
     let author = AuthorName.value;
@@ -43,32 +45,55 @@ function addBookToLibrary() {
 }
 
 function displayNewBook(title, author, pages, readStatus) {
-  const bookDiv = document.createElement("div");
-  bookDiv.classList.add("content");
+  const list = document.createElement("ul");
+  list.classList.add("ako");
+
+  const bookDiv = document.createElement("li");
   bookDiv.textContent = title;
-  container.appendChild(bookDiv);
+  list.appendChild(bookDiv);
+  container.appendChild(list);
 
-  const authorDiv = document.createElement("div");
-  authorDiv.classList.add("content");
+  const authorDiv = document.createElement("li");
   authorDiv.textContent = author;
-  container.appendChild(authorDiv);
+  list.appendChild(authorDiv);
+  container.appendChild(list);
 
-  const pageDiv = document.createElement("div");
-  pageDiv.classList.add("content");
+  const pageDiv = document.createElement("li");
   pageDiv.textContent = pages;
-  container.appendChild(pageDiv);
+  list.appendChild(pageDiv);
+  container.appendChild(list);
 
-  const readDiv = document.createElement("div");
-  readDiv.classList.add("content");
+  const readDiv = document.createElement("li");
   readDiv.textContent = readStatus;
-  container.appendChild(readDiv);
+  list.appendChild(readDiv);
+  container.appendChild(list);
+
+  const removeDiv = document.createElement("li");
+  let butt = document.createElement("button");
+  let img = document.createElement("img");
+  img.src = "./pictures/remove.png";
+  butt.classList.add("removeBtn");
+  butt.appendChild(img);
+  removeDiv.appendChild(butt);
+
+  list.appendChild(removeDiv);
+  container.appendChild(list);
 }
-
-
 
 function clearInput() {
   document.getElementById("form").reset();
 }
 
+function jeje() {
+  removeButton.addEventListener("click", () => {
+    console.log("aa");
+  });
+}
+
+removeButton.forEach((but) => {
+  but.addEventListener("click", () => {
+    console.log("aa");
+  });
+});
 
 addBookToLibrary();

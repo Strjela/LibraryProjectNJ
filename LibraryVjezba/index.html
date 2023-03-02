@@ -14,15 +14,15 @@
         <form id="form">
             <div>
                 <label for="BookName"></label>
-                <input type="text" id="BookName" name="BookName" placeholder="Title..." autocomplete="off" required/>
+                <input type="text" id="BookName" name="BookName" placeholder="Title..." value="Nikola" autocomplete="off" required/>
             </div>
             <div>
                 <label for="AuthorName"></label>
-                <input type="text" id="AuthorName" name="AuthorName"placeholder="Author..." autocomplete="off" required/>
+                <input type="text" id="AuthorName" name="AuthorName"placeholder="Author..." value="Prikola" autocomplete="off" required/>
             </div>
             <div>
                 <label for="pageNumber"></label>
-                <input type="number" id="pageNumber" name="pageNumber" placeholder="Page Number..." required/>
+                <input type="number" id="pageNumber" name="pageNumber" placeholder="Page Number..." value="150" required/>
             </div>
         
             <div>
@@ -36,6 +36,9 @@
                 <button type="submit" id="subBtn" ><p>Add A New Book</p><img class="bookIcon" src="./pictures/book-icon-145.png" width="40px" height="40px"></button>
             </div>
         </form>
+
+       
+
     </div>
 
     <div class="mainContent">
@@ -47,16 +50,10 @@
         </ul>
     </div>
     <div class="container">
-        <div id="bookOutput">
-            <!-- <ul class="output">
-                <li class="book"></li>
-                <li class="author"></li>
-                <li class="pages"></li>
-                <li class="status"></li>
-                <li class="remove"></li>
-            </ul> -->
-        </div>
+        <div id="bookOutput"></div>
+        <!-- <button class="removeBtn"><img src="./pictures/remove.png" width="40px" height="40px"></button> -->
     </div>
+
     
 
  

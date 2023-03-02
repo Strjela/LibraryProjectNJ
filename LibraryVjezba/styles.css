@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 
 body{
     margin: 0;
@@ -77,7 +79,7 @@ input[type=text] {
   #subBtn {
     width: 90%;
     height: 80px;
-    margin-top: 12px;
+    margin-top: 16px;
     margin-left: 10px;
     padding: 12px 10px;
     box-sizing: border-box;
@@ -92,6 +94,12 @@ input[type=text] {
     
     
   }
+
+#subBtn:hover{
+    transform: scale(1.05);
+}
+
+
   
   
 
@@ -109,20 +117,43 @@ input[type=text] {
 .mainContent ul {
     list-style-type: none;
     display: flex;
-    gap: 16rem;
+    gap: 12rem;
     justify-content: center;
     align-self: center;
     font-family: 'Mulish', sans-serif;;
+    font-size: 1.5rem;
     color: bisque;
     margin-top: 4rem;
-    padding: 22px;
+    padding: 28px;
     background-color: #1F3E59;
+
+    margin-left: -16rem;
 }
 
 .container {
     grid-area: container;
-    background-color: #ade194;
+    background-color: #A88AA2;
+    display: flex;
+    justify-content: center;
 }
+
+.ako{
+    list-style-type: none;
+    display: flex;
+    gap: 14rem;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    padding: 22px;
+    border-bottom: #182d3f 2px dotted;
+   
+}
+
+
 
 footer{
     grid-area: footer;
@@ -131,8 +162,27 @@ footer{
     color: aliceblue;
 }
 
+.removeBtn{
+
+    background-color: #A88AA2;
+    border: 0;
+    padding: 0;
+   height: 40px;
+   width: 40px;
+   margin-top: -15px;
+   margin-left: -80px;
+   
+}
+
+.removeBtn:hover{
+    transform: scale(1.4)
+}
 
 
 
+.removeBtn img{
+    width: 40px;
+    height: 40px;
+}
 
 
