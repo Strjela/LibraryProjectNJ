@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+        grid-template-columns: 0.4fr 1.3fr;
+        grid-template-rows: 0.6fr 2.6fr 0.1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "sidebar mainContent"
+          "sidebar container"
+          "footer footer";
+    
+      
+    
+}
+
+h1{
+    font-size: 5rem;
+    
+}
+
+h1 {
+    color: bisque;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.sidebar{
+    
+    grid-area: sidebar;
+    padding: 6%;
+    background-color: #936C8B;
+}
+
+form{
+    height: 400px;
+}
+
+form div {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: larger;
+    
+  }
+
+  input[type=number] {
+    width: 60%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: larger;
+    
+  }
+
+  select{
+    width: 50%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    
+  }
+
+  #subBtn {
+    width: 90%;
+    height: 80px;
+    margin-top: 12px;
+    margin-left: 10px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #ade194;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+    
+  }
+  
+  
+
+
+
+.mainContent{
+    grid-area: mainContent;
+    display: flex;
+    justify-content: center;
+    background-color:#A88AA2;
+
+
+}
+
+.mainContent ul {
+    list-style-type: none;
+    display: flex;
+    gap: 16rem;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Mulish', sans-serif;;
+    color: bisque;
+    margin-top: 4rem;
+    padding: 22px;
+    background-color: #1F3E59;
+}
+
+.container {
+    grid-area: container;
+    background-color: #ade194;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #182d3f;
+    color: aliceblue;
+}
+
+
+
+
+
+

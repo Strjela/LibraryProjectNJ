@@ -4,9 +4,9 @@ const AuthorName = document.getElementById("AuthorName");
 const pageNumber = document.getElementById("pageNumber");
 const readStatus = document.getElementById("readStat");
 
-const container = document.getElementById("displayBook");
+const container = document.getElementById("bookOutput");
 
-
+console.log(container);
 
 let myLibrary = [];
 
@@ -27,7 +27,7 @@ function addBookToLibrary() {
       BookName.value === "" ||
       AuthorName.value === "" ||
       pageNumber.value === "" ||
-      readStatus.value === 'Did you read this book?'
+      readStatus.value === "Did you read this book?"
     )
       return;
 
