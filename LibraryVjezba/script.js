@@ -6,7 +6,7 @@ const readStatus = document.getElementById("readStat");
 
 const container = document.getElementById("bookOutput");
 
-const removeButton = document.querySelectorAll("#removeBtn");
+const removeButton = document.querySelectorAll(".removeBtn");
 
 let myLibrary = [];
 
@@ -74,8 +74,14 @@ function displayNewBook(title, author, pages, readStatus) {
   img.src = "./pictures/remove.png";
   butt.classList.add("removeBtn");
   butt.appendChild(img);
-  removeDiv.appendChild(butt);
 
+  butt.addEventListener("click", () => {
+    const bookIndex = myLibrary.findIndex((book) => book.title === title);
+    myLibrary.splice(bookIndex, 1);
+    container.removeChild(list);
+  });
+
+  removeDiv.appendChild(butt);
   list.appendChild(removeDiv);
   container.appendChild(list);
 }
@@ -83,17 +89,5 @@ function displayNewBook(title, author, pages, readStatus) {
 function clearInput() {
   document.getElementById("form").reset();
 }
-
-function jeje() {
-  removeButton.addEventListener("click", () => {
-    console.log("aa");
-  });
-}
-
-removeButton.forEach((but) => {
-  but.addEventListener("click", () => {
-    console.log("aa");
-  });
-});
 
 addBookToLibrary();
