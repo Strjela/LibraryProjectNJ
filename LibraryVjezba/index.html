@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="sidebar">
-        <h1 id="header"><img src="./pictures/pngwing.com.png" alt="book" width="100px" height="100px"> Library</h1>
-        <form id="form">
-            <div>
-                <label for="BookName"></label>
-                <input type="text" id="BookName" name="BookName" placeholder="Title..." value="Nikola" autocomplete="off" required/>
-            </div>
-            <div>
-                <label for="AuthorName"></label>
-                <input type="text" id="AuthorName" name="AuthorName"placeholder="Author..." value="Prikola" autocomplete="off" required/>
-            </div>
-            <div>
-                <label for="pageNumber"></label>
-                <input type="number" id="pageNumber" name="pageNumber" placeholder="Page Number..." value="150" required/>
-            </div>
-        
-            <div>
-                <select id="readStat"> 
-                    <option selected hidden>Did you read this book?</option>
-                    <option >Yes!</option>
-                    <option >Not yet!</option>
-                </select>
-            </div> 
-            <div>
-                <button type="submit" id="subBtn" ><p>Add A New Book</p><img class="bookIcon" src="./pictures/book-icon-145.png" width="40px" height="40px"></button>
-            </div>
-        </form>
+      <h1 id="header">
+        <img
+          src="./pictures/pngwing.com.png"
+          alt="book"
+          width="100px"
+          height="100px"
+        />
+        Library
+      </h1>
+      <form id="form">
+        <div>
+          <label for="BookName"></label>
+          <input
+            type="text"
+            id="BookName"
+            name="BookName"
+            placeholder="Title..."
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div>
+          <label for="AuthorName"></label>
+          <input
+            type="text"
+            id="AuthorName"
+            name="AuthorName"
+            placeholder="Author..."
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div>
+          <label for="pageNumber"></label>
+          <input
+            type="number"
+            id="pageNumber"
+            name="pageNumber"
+            placeholder="Page Number..."
+            required
+          />
+        </div>
 
-       
-
+        <div>
+          <select id="readStat">
+            <option selected hidden>Did you read this book?</option>
+            <option>Yes!</option>
+            <option>Not yet!</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" id="subBtn">
+            <p>Add A New Book</p>
+            <img
+              class="bookIcon"
+              src="./pictures/book-icon-145.png"
+              width="40px"
+              height="40px"
+            />
+          </button>
+        </div>
+      </form>
     </div>
 
     <div class="mainContent">
-        <ul class="info">
-            <li>TITLE</li>
-            <li>AUTHOR</li>
-            <li>PAGES</li>
-            <li>READ</li>
-        </ul>
+      <ul class="info">
+        <li>TITLE</li>
+        <li>AUTHOR</li>
+        <li>PAGES</li>
+        <li>READ</li>
+      </ul>
     </div>
     <div class="container">
-        <div id="bookOutput"></div>
-        <!-- <button class="removeBtn"><img src="./pictures/remove.png" width="40px" height="40px"></button> -->
+      <div id="bookOutput"></div>
+      <!-- <button class="removeBtn"><img src="./pictures/remove.png" width="40px" height="40px"></button> -->
     </div>
 
-    
-
- 
-
-   <footer>Copyright © 2023 Nikola Jelic <img src="./pictures/github-mark.png" width="20px" height="20px">  </footer>
-</body>
+    <footer>
+      Copyright © 2023 Nikola Jelic
+      <img src="./pictures/github-mark.png" width="20px" height="20px" />
+    </footer>
+  </body>
 </html>
